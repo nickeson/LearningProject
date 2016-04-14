@@ -4,8 +4,9 @@ package com.nickeson.learning;
 
 /****************************************************************************
  * <b>Title</b>: GravityCalc.java <p/>
- * <b>Project</b>: WebCrescendo <p/>
- * <b>Description: </b> Put Something Here
+ * <b>Project</b>: LearningProject1 <p/>
+ * <b>Description: </b> An earth gravity calculator that computes final position 
+ * and velocity, given intitial position, velocity and fall time
  * <p/>
  * <b>Copyright:</b> Copyright (c) 2016<p/>
  * <b>Company:</b> Silicon Mountain Technologies<p/>
@@ -18,14 +19,14 @@ package com.nickeson.learning;
 public class GravityCalc {
 
 	/**
-	 * Gravity is constant on earth at -9.8 m/s/s
+	 * Gravity is constant on earth at -9.8 (m/s)/s
 	 */
-	public final float GRAVITY = -9.80665f;
+	public final double GRAVITY = -9.80665d;
 	
 	// Member Variables
-	private double fallTime = 0.00;
-	private double iniPos = 0.00;
-	private double iniVel = 0.00;
+	private double fallTime = 0; 
+	private double iniPos = 0;
+	private double iniVel = 0;
 				
 	/**
 	 * default constructor
@@ -37,7 +38,7 @@ public class GravityCalc {
 	 * convenience constructor
 	 * @param fallTime time (in seconds) that the object is in free fall
 	 * @param iniPos initial position of object (in meters)
-	 * @param iniVel initial velocity of object (in meters)
+	 * @param iniVel initial velocity of object (in meters per second)
 	 */
 	public GravityCalc(double fallTime, double iniPos, double iniVel) {
 		this.fallTime = fallTime;
@@ -46,69 +47,66 @@ public class GravityCalc {
 	}
 
 	/**
-	 * Main method to set initial position and velocity, run posCalc to get 
-	 * freefall position calculated, then output result
+	 * Main method - create instance of GravityCalc, set GravityCalc params, then run businessLogic
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
-		// create an instance of the GravityCalc Object (class)
 		GravityCalc g1 = new GravityCalc(3,10,20);
-		g1.process();
+		g1.businessLogic();
 	}
 	
 	/**
-	 * Business Logic Method
+	 * Method to use specific instance of GravityCalc, run posCalc and veloCalc
+	 * on that instance, and output results to console
 	 */
-	public void process() {
+	public void businessLogic() {
 		
-		// run posCalc & veloCalc with initPosition and initVelocity params
+		// run posCalc & veloCalc with instance's passed params
 		double finalPosition = posCalc();
 		double finalVelocity = veloCalc();
 		
 		// output results to console
 		System.out.println("An object's position after " +
 			fallTime + " seconds of freefall with an initial position of " 
-			+ iniPos + " meters "
-			+ " and an initial velocity of " + iniVel + " m/s "
+			+ iniPos + " meters"
+			+ " and an initial velocity of " + iniVel + " m/s"
 			+ " is " + finalPosition + " meters.");
 		
 		System.out.println("An object's velocity after " +
 			fallTime + " seconds of freefall with an initial position of " 
-			+ iniPos + " meters "
-			+ " and an initial velocity of " + iniVel + " m/s "
+			+ iniPos + " meters"
+			+ " and an initial velocity of " + iniVel + " m/s"
 			+ " is " + finalVelocity + " m/s.");
 	}
 	
 	
 	/**
-	 * Calculates final position
+	 * Calculates object's final position
 	 * @return final position 0 if problems occur
 	 */
 	public double posCalc() {
 		
-		// calculate final position
 		double finalPos = .5 * GRAVITY * fallTime * fallTime;
 		finalPos += iniVel * fallTime;
 		finalPos += iniPos;
 		
-		// output results of calculation
 		return finalPos;
 	}
 	
 	/**
-	 * Calculates final velocity
+	 * Calculates object's final velocity
 	 * @return final velocity calculation 0 if problems occur
 	 */
 	public double veloCalc() {
-		// calculate final velocity
+		
 		double finalVelo = iniVel + (GRAVITY * fallTime);
 		
-		// output results of calculation
 		return finalVelo;
 	}
 
 	/**
+	 * Returns the object's fall time (in sec)
 	 * @return the fallTime
 	 */
 	public double getFallTime() {
@@ -116,6 +114,7 @@ public class GravityCalc {
 	}
 
 	/**
+	 * Sets the object's fall time (in sec)
 	 * @param fallTime the fallTime to set
 	 */
 	public void setFallTime(double fallTime) {
@@ -123,6 +122,7 @@ public class GravityCalc {
 	}
 
 	/**
+	 * Returns the object's initial position (in meters)
 	 * @return the iniPos
 	 */
 	public double getIniPos() {
@@ -130,6 +130,7 @@ public class GravityCalc {
 	}
 
 	/**
+	 * Sets the object's initial position (in meters)
 	 * @param iniPos the iniPos to set
 	 */
 	public void setIniPos(double iniPos) {
@@ -137,6 +138,7 @@ public class GravityCalc {
 	}
 
 	/**
+	 * Returns the object's initial velocity (in m/s)
 	 * @return the iniVel
 	 */
 	public double getIniVel() {
@@ -144,6 +146,7 @@ public class GravityCalc {
 	}
 
 	/**
+	 * Sets the object's initial velocity (in m/s)
 	 * @param iniVel the iniVel to set
 	 */
 	public void setIniVel(double iniVel) {
