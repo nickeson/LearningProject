@@ -15,7 +15,7 @@ import java.util.Random;
  * @author nickeson
  * @version 1.0
  * @since Apr 14, 2016<p/>
- * updates: testing git
+ * updates: 
  ****************************************************************************/
 
 public class ArrayPractice {
