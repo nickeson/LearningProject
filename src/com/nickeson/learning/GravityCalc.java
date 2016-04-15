@@ -23,7 +23,7 @@ public class GravityCalc {
 	 */
 	public final double GRAVITY = -9.80665d;
 	
-	// Member Variables
+	// Member Variables initialized to 0 for default constructor
 	private double fallTime = 0; 
 	private double iniPos = 0;
 	private double iniVel = 0;
@@ -104,7 +104,7 @@ public class GravityCalc {
 		
 		return finalVelo;
 	}
-
+	
 	/**
 	 * Returns the object's fall time (in sec)
 	 * @return the fallTime
