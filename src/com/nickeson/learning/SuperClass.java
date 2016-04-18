@@ -3,7 +3,7 @@ package com.nickeson.learning;
 //JDK 1.8.0
 
 /****************************************************************************
- * <b>Title</b>: SubClassPracticeObject.java <p/>
+ * <b>Title</b>: SuperClass.java <p/>
  * <b>Project</b>: WebCrescendo <p/>
  * <b>Description: </b> Put Something Here
  * <p/>
@@ -11,19 +11,14 @@ package com.nickeson.learning;
  * <b>Company:</b> Silicon Mountain Technologies<p/>
  * @author nickeson
  * @version 1.0
- * @since Apr 15, 2016<p/>
+ * @since Apr 18, 2016<p/>
  * updates:
  ****************************************************************************/
 
-public class SubClassPracticeObject {
+public class SuperClass {
 
-	public SubClassPracticeObject() {
-		// TODO Auto-generated constructor stub
+	public void printHelloSuper() {
+		System.out.println("Hello from SuperClass");
+		return;
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("TEST");
-	}
-
 }
