@@ -4,8 +4,8 @@ package com.nickeson.learning;
 
 /****************************************************************************
  * <b>Title</b>: SuperClass.java <p/>
- * <b>Project</b>: WebCrescendo <p/>
- * <b>Description: </b> Put Something Here
+ * <b>Project</b>: SuperClass testing <p/>
+ * <b>Description: </b>  Testing class extension methods and principles
  * <p/>
  * <b>Copyright:</b> Copyright (c) 2016<p/>
  * <b>Company:</b> Silicon Mountain Technologies<p/>
@@ -17,6 +17,27 @@ package com.nickeson.learning;
 
 public class SuperClass {
 
+	/**
+	 * default constructor for SuperClass
+	 */
+	public SuperClass() {
+		
+	}
+	
+	/**
+	 * main method for 'SuperClass'
+	 * instantiates an object testSuperClass, calls printHelloSuper method
+	 * @param args
+	 */
+		public static void main(String[] args) {
+			
+		SuperClass testSuperClass = new SuperClass();
+		testSuperClass.printHelloSuper();
+	}
+	
+	/**
+	 * method to print a statement from SuperClass
+	 */
 	public void printHelloSuper() {
 		System.out.println("Hello from SuperClass");
 		return;

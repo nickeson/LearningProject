@@ -16,14 +16,18 @@ package com.nickeson.learning;
  ****************************************************************************/
 
 public class Bird extends Animal {
+	
+	String name;
 
 	/**
 	 * default constructor for Bird subclass
+	 * also calls default constructor for superclass w/no args
+	 * (this is always done implicitly, here we do it explicitly for code clarity)
 	 */
 	public Bird() { 
 		
-	// default constructor for superclass w/no args (always called implicitly)
-	super(); 
+	super();
+	
 	}
 
 	/**

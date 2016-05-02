@@ -129,7 +129,7 @@ public class ArrayPractice {
 			System.out.print("arrayRandomNumber[" + i + "]: " + randVal + "\n");
 		}
 	}
-
+	
 	/**
 	 * get the size of the random number array that is displayed
 	 * @return the ranNumberArraySize

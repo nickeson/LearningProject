@@ -4,8 +4,8 @@ package com.nickeson.learning;
 
 /****************************************************************************
  * <b>Title</b>: SubClass.java <p/>
- * <b>Project</b>: WebCrescendo <p/>
- * <b>Description: </b> Put Something Here
+ * <b>Project</b>: SubClass testing <p/>
+ * <b>Description: </b> Testing class extension methods
  * <p/>
  * <b>Copyright:</b> Copyright (c) 2016<p/>
  * <b>Company:</b> Silicon Mountain Technologies<p/>
@@ -17,10 +17,21 @@ package com.nickeson.learning;
 
 public class SubClass extends SuperClass {
 
-	// default constructor
+	/**
+	 * default constructor for Bird subclass
+	 * also calls default constructor for Animal superclass w/no args
+	 * (this is always done implicitly, here we do it explicitly for code clarity)
+	 */
 	public SubClass() {
+		
+		super();
+		
 	}
 	
+	/**
+	 * main method to create objects of SuperClass and SubClass and use their methods
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		// create new object of class SubClass called 'testObj'
@@ -36,12 +47,14 @@ public class SubClass extends SuperClass {
 		testObj2.printHelloSuper();
 	}	
 
+	/**
+	 * method to print message from SubClass
+	 */
 	public void printHelloSub() {
 		
-		// can call method from superclass within a subclass method
+		// example of calling method from superclass within a subclass method
 		// super.printHelloSuper();
 		
-		// print method from SubClass
 		System.out.println("Hello from SubClass");
 		return;
 	}

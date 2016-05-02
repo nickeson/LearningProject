@@ -18,7 +18,7 @@ package com.nickeson.learning;
 public class Animal {
 
 	/**
-	 * default constructor
+	 * default constructor for Animal superclass
 	 */
 	public Animal() {
 	}
@@ -33,6 +33,7 @@ public class Animal {
 		System.out.println("A new animal has been created!");
 		
 		testAnimal.eat();
+		testAnimal.sleep();
 	}
 	
 	/**
