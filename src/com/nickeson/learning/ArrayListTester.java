@@ -17,9 +17,9 @@ import java.util.*;
  * updates:
  ****************************************************************************/
 
-public class IteratorTest {
+public class ArrayListTester {
 
-	public IteratorTest() {
+	public ArrayListTester() {
 		// TODO Auto-generated constructor stub
 	}
 
